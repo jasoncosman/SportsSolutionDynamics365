@@ -97,28 +97,7 @@ namespace Xrm.Sports.Plugins
                         //Tie
                         case 492470002:
                             
-                            if(homeTeamEntity.Attributes.Contains("jmvp_tierecord"))
-                            { 
-                                homeTeamEntity.Attributes["jmvp_tierecord"] = (int)homeTeamEntity.Attributes["jmvp_tierecord"] + 1;
 
-                                service.Update(homeTeamEntity);
-                            }
-                            else
-                            {
-                                //homeTeamEntity.Attributes.Add(new KeyValuePair<string, object>("jmvp_tierecord"), (int)homeTeamEntity.Attributes["jmvp_tierecord"] + 1));
-                            }
-                            if (homeTeamEntity.Attributes.Contains("jmvp_tierecord"))
-                            {
-                                awayTeamEntity.Attributes["jmvp_tierecord"] = (int)awayTeamEntity.Attributes["jmvp_tierecord"] + 1;
-                                service.Update(awayTeamEntity);
-                            }
-                            else
-                            {
-
-                            }
-
-
-                            break;
 
 
                     }
