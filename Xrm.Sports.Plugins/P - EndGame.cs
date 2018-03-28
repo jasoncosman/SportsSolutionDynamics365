@@ -96,7 +96,7 @@ namespace Xrm.Sports.Plugins
                             break;
                         //Tie
                         case 492470002:
-                            
+                            break;   
 
 
 
