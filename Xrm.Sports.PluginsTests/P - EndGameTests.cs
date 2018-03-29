@@ -41,17 +41,9 @@ namespace Xrm.Sports.Plugins.Tests
             game1["jmvp_awayteam"] = new EntityReference(team2.LogicalName, team2.Id);
             game1["jmvp_outcome"] = new OptionSetValue(492470000);
 
-            var game2 = new Entity("jvmp_game");
-            game2.Id = Guid.NewGuid();
-            game2["jvmp_name"] = "December 15th - Maple Leafs vs Canadiens";
-            game2["jmvp_hometeam"] = new EntityReference(team2.LogicalName, team2.Id);
-            game2["jmvp_awayteam"] = new EntityReference(team1.LogicalName, team1.Id);
-            game2["jmvp_outcome"] = new OptionSetValue(492470001);
-
-
             fakedContext.Initialize(new List<Entity>()
             {
-                team1, team2, game1, game2
+                team1, team2, game1
             });
 
 
@@ -189,11 +181,6 @@ namespace Xrm.Sports.Plugins.Tests
             {
                 team1, team2, game1, game2
             });
-
-            //"ajg_winrecord, ajg_lossrecord, ajg_points, ajg_tierecord"
-
-
-
 
             return fakedContext;
         }
